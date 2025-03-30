@@ -1,22 +1,103 @@
-# 📌 Event Propagation in JavaScript
+# JavaScript ES6+ Features Checklist
 
-Event propagation refers to how events travel through the **DOM (Document Object Model)**.  
-There are two main phases:
+A checklist of JavaScript ES6+ features grouped by category.
 
-1. **Event Bubbling** → The event starts at the target element and **bubbles up** to the root.
-2. **Event Capturing (Trickling)** → The event starts at the root and **trickles down** to the target.
+## ✅ Completed Features
+
+### 🏗️ Variables & Copying
+- [x] `let` and `const`
+- [x] Template Literals
+- [x] Object Destructuring `{a, b} = obj`
+- [x] Array Destructuring `[a, b] = arr`
+- [x] Spread Operator `...`
+- [x] Rest Parameter `...args`
+- [x] Default Parameters
+- [ ] Shallow Copy with `Object.assign()` and `{ ...obj }`
+- [ ] Deep Copy with `structuredClone()`
+
+### 🔄 Iteration & Loops
+- [x] `for/of` Loop
+- [x] `Array.entries()`
+- [x] `Array.keys()`
+- [x] `Array.values()`
+
+### 🔢 Array Methods
+- [x] `Array.from()`
+- [x] `Array.find()`
+- [x] `Array.findIndex()`
+- [x] `map()`
+- [x] `filter()`
+- [x] `reduce()`
+- [x] `concat()`
+- [x] `join()`
+- [x] `splice()`
+- [x] `slice()`
+- [x] `sort`
+- [x] `reverse`
+
+### 🔠 String Methods
+- [x] `String.includes()`
+- [x] `String.startsWith()`
+- [x] `String.endsWith()`
+- [ ] Tagged Template Literals
+
+### 🔢 Number & Math Enhancements
+- [x] `Number.EPSILON`
+- [x] `Number.MIN_SAFE_INTEGER`
+- [x] `Number.MAX_SAFE_INTEGER`
+- [x] `Number.isInteger()`
+- [x] `Number.isSafeInteger()`
+- [x] `Math.trunc()`
+- [x] `Math.sign()`
+- [x] `Math.cbrt()`
+- [x] `Math.log2()`
+- [x] `Math.log10()`
+
+### 🚀 Functions & Asynchronous Code
+- [x] Arrow Functions `() => {}`  
+- [x] Function Rest Parameter `...args`
+- [x] Promises
+- [x] `async/await`
+- [x] Debouncing & Throttling
+- [x] `setTimeout()` & `setInterval()`
+- [x] `requestAnimationFrame()`
+
+### 🛠️ Objects & Data Structures
+- [x] `Map`
+- [x] `Set`
+- [ ] `WeakMap`
+- [ ] `WeakSet`
+- [ ] `Object.entries()`
+- [ ] `Object.values()`
+- [ ] `Object.keys()`
+- [ ] `Object.freeze()`
+- [ ] `Object.seal()`
+- [ ] `Symbol`
+
+### ⚙️ Advanced JavaScript
+- [x] Event Bubbling, Capturing, Delegation & Stop Propagation
+- [ ] `Proxy` and `Reflect`
+- [ ] Generators `function*`
+- [ ] Iterators & `Symbol.iterator`
+- [x] Web Workers
+- [ ] Currying Functions
+
+### 🌐 Modern Web APIs
+- [x] Fetch API
+- [ ] Service Workers
+- [ ] Intl API (for internationalization)
+- [ ] Web Storage (`localStorage`, `sessionStorage`)
 
 ---
 
-## 📌 Summary Table
-
-| Concept                | Description | Example Output | Real-World Use Case |
-|------------------------|-------------|----------------|----------------------|
-| **Event Bubbling** | The event starts at the target element and moves **up** to its ancestors. | Clicking a button inside a div triggers both the button’s and the div’s event listeners. | **Form submission tracking** - Clicking the submit button logs an event at the form level. |
-| **Event Capturing** | The event starts at the root and moves **down** to the target. | Using `{ capture: true }` in `addEventListener` makes the parent element's listener fire first. | **Navigation tracking** - Capturing clicks before the user navigates away. |
-| **Event Delegation** | Uses event bubbling to handle multiple child elements with a single event listener. | A single event listener on `<ul>` handles clicks for dynamically added `<li>` items. | **Chat apps / To-Do lists** - New messages or tasks get event listeners dynamically. |
-| **Stopping Propagation** | Prevents an event from bubbling or capturing further. | Calling `event.stopPropagation()` prevents parent elements from handling the event. | **Modal dialogs** - Clicking inside a modal shouldn’t close it, only clicking outside should. |
+## 🔜 Upcoming Features to Explore
+- [ ] Dynamic Imports `import()`
+- [ ] Optional Chaining `?.`
+- [ ] Nullish Coalescing `??`
+- [ ] WeakRef & FinalizationRegistry
+- [ ] ECMAScript Modules (ESM) `import/export`
+- [ ] `BigInt`
 
 ---
 
-💡 **Event propagation helps improve performance, manage dynamic elements efficiently, and control event flow in web applications.**
+This checklist helps track JavaScript ES6+ learning progress. Happy coding! 🚀

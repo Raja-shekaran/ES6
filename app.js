@@ -1,20 +1,21 @@
-//without debounce
+// ====================================
+// 🚀 JavaScript Concepts: Advanced
+// ====================================
+
+// 📌 1. Function Execution Without Debounce
 let counter = 0;
 const callAPI = (event) => {
     const query = event.target.value;
     console.log(query, ++counter);
 };
 
-// inputValue.addEventListener('keyup', callAPI)
+// inputValue.addEventListener('keyup', callAPI);
 
-//--------------------------------------------------------------
-
-//with debounce
+// ====================================
+// 📌 2. Debouncing - Delaying Function Execution
+// ====================================
 
 const debouncing = (fn, delay) => {
-    //input: function and delay as parameter
-    //output: function with setTimeout
-    //action: it delays a function.
     let timer;
     return (...args) => {
         clearTimeout(timer);
@@ -22,29 +23,28 @@ const debouncing = (fn, delay) => {
     };
 };
 
-//inputValue.addEventListener("keyup", debouncing(callAPI, 500));
+// inputValue.addEventListener("keyup", debouncing(callAPI, 500));
 
-//----------------------------------------------------------------------
+// ====================================
+// 📌 3. Throttling - Limiting Function Execution
+// ====================================
 
 const throttling = (fn, tim) => {
-    //input: function and delay as parameter
-    //output: function call done only once within the time interval
-    //action: it runs function once within time interval
-    noOfCall = 0;
+    let lastExecutionTime = 0;
     return (...args) => {
-        currentTime = Date.now();
-        if (currentTime - noOfCall >= tim) {
-            noOfCall = currentTime;
+        let currentTime = Date.now();
+        if (currentTime - lastExecutionTime >= tim) {
+            lastExecutionTime = currentTime;
             fn(...args);
         }
     };
 };
 
-inputValue.addEventListener("keyup", throttling(callAPI, 5000));
+// inputValue.addEventListener("keyup", throttling(callAPI, 5000));
 
-//---------------------------------------------------
-
-//requestAnimationFrame
+// ====================================
+// 📌 4. requestAnimationFrame - Smooth Animations
+// ====================================
 
 const progressBar = document.getElementById("progress");
 
@@ -66,45 +66,48 @@ function animateProgress(duration) {
     requestAnimationFrame(step);
 }
 
-// Start the animation on button click
+// Start animation on button click
 startButton.addEventListener("click", () => {
     progressBar.style.width = "0%";
     animateProgress(2000);
 });
 
-//---------------------------------------------------
+// ====================================
+// 📌 5. setInterval - Repeated Execution
+// ====================================
 
-//setInterval
-
-window.onload = function() {
+window.onload = function () {
     let count = 0;
     let intervalId = setInterval(() => {
         let counterElement = document.getElementById("counter");
         counterElement.textContent = count;
         count++;
-    }, 5000); // Updates every 5 second
+    }, 5000); // Updates every 5 seconds
 
     // Function to stop the counter
-    window.stopCounter = function() {
+    window.stopCounter = function () {
         clearInterval(intervalId);
         alert("Counter stopped!");
     };
 };
 
-//-------------------------------------------------------
+// ====================================
+// 📌 6. Event Propagation: Bubbling & Capturing
+// ====================================
 
-//Event Bubbling - Bottom - Top and Event Capturing - Top - Bottom
-
+// Bubbling (Bottom to Top) vs Capturing (Top to Bottom)
 document.getElementById("parent").addEventListener("click", () => {
     console.log("Parent Div Clicked");
-}, { capture: true }); //capture flag is added at parent level
+}, { capture: true }); // Capturing phase
 
 document.getElementById("child").addEventListener("click", (event) => {
     console.log("Button Clicked");
-    //event.stopPropagation(); --> Stop Propogation
+    // event.stopPropagation(); --> Stop Propagation
 });
 
-//Event Delegation
+// ====================================
+// 📌 7. Event Delegation
+// ====================================
 
 document.getElementById("list").addEventListener("click", (event) => {
     if (event.target.tagName === "LI") {
@@ -112,7 +115,9 @@ document.getElementById("list").addEventListener("click", (event) => {
     }
 });
 
-//Stop Propagation
+// ====================================
+// 📌 8. Stop Event Propagation
+// ====================================
 
 // document.getElementById("overlay").addEventListener("click", () => {
 //     console.log("Overlay Clicked - Closing Modal");
@@ -127,3 +132,32 @@ document.getElementById("list").addEventListener("click", (event) => {
 // document.getElementById("closeModal").addEventListener("click", () => {
 //     document.getElementById("overlay").style.display = "none";
 // });
+
+// ====================================
+// 📌 9. Memoization - Optimizing Expensive Computation
+// ====================================
+
+function memoizedFibonacci() {
+    let cache = {};
+    return function fib(n) {
+        if (n in cache) return cache[n];
+        if (n <= 1) return n;
+        cache[n] = fib(n - 1) + fib(n - 2);
+        return cache[n];
+    };
+}
+
+const fibonacci = memoizedFibonacci();
+console.log(fibonacci(10)); // 55
+console.log(fibonacci(40)); // 102334155
+
+// ====================================
+// 📌 10. Lazy Loading - Load Images Only When Needed
+// ====================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    let lazyImages = document.querySelectorAll(".lazy-load");
+    lazyImages.forEach(img => {
+        img.src = img.dataset.src; // Loads actual image when needed
+    });
+});
