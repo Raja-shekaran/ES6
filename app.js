@@ -90,3 +90,24 @@ window.onload = function() {
         alert("Counter stopped!");
     };
 };
+
+//-------------------------------------------------------
+
+//Event Bubbling - Bottom - Top and Event Capturing - Top - Bottom
+
+document.getElementById("parent").addEventListener("click", () => {
+    console.log("Parent Div Clicked");
+}, { capture: true }); //capture flag is added at parent level
+
+document.getElementById("child").addEventListener("click", (event) => {
+    console.log("Button Clicked");
+    //event.stopPropagation(); --> Stop Propogation
+});
+
+//Event Delegation
+
+document.getElementById("list").addEventListener("click", (event) => {
+    if (event.target.tagName === "LI") {
+        console.log(`Clicked on ${event.target.textContent}`);
+    }
+});
