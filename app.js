@@ -111,3 +111,19 @@ document.getElementById("list").addEventListener("click", (event) => {
         console.log(`Clicked on ${event.target.textContent}`);
     }
 });
+
+//Stop Propagation
+
+// document.getElementById("overlay").addEventListener("click", () => {
+//     console.log("Overlay Clicked - Closing Modal");
+//     document.getElementById("overlay").style.display = "none";
+// });
+
+// document.getElementById("modal").addEventListener("click", (event) => {
+//     event.stopPropagation(); // Prevents event from reaching overlay
+//     console.log("Modal Clicked - Not Closing");
+// });
+
+// document.getElementById("closeModal").addEventListener("click", () => {
+//     document.getElementById("overlay").style.display = "none";
+// });
