@@ -14,8 +14,8 @@ A comprehensive checklist and reference guide to modern JavaScript, ES6+ feature
 - [x] Spread Operator `...`
 - [x] Rest Parameters `...args`
 - [x] Default Parameters
-- [ ] Shallow Copy with `Object.assign()` / `{ ...obj }`
-- [ ] Deep Copy with `structuredClone()`
+- [x] Shallow Copy with `Object.assign()` / `{ ...obj }`
+- [x] Deep Copy with `structuredClone()`
 
 ### 🔄 Iteration & Loops
 - [x] `for/of` Loop
@@ -42,7 +42,7 @@ A comprehensive checklist and reference guide to modern JavaScript, ES6+ feature
 - [x] `String.includes()`
 - [x] `String.startsWith()`
 - [x] `String.endsWith()`
-- [ ] Tagged Template Literals
+- [x] Tagged Template Literals
 
 ### 🔢 Number & Math Enhancements
 - [x] `Number.EPSILON`
