@@ -1,18 +1,20 @@
-# JavaScript ES6+ Features Checklist
+# 🧠 JavaScript & ES6+ Knowledge Base
 
-A checklist of JavaScript ES6+ features grouped by category.
+A comprehensive checklist and reference guide to modern JavaScript, ES6+ features, and advanced JS concepts.
 
-## ✅ Completed Features
+---
+
+## ✅ ES6+ Feature Checklist
 
 ### 🏗️ Variables & Copying
-- [x] `let` and `const`
+- [x] `let`, `const`, and `var`
 - [x] Template Literals
 - [x] Object Destructuring `{a, b} = obj`
 - [x] Array Destructuring `[a, b] = arr`
 - [x] Spread Operator `...`
-- [x] Rest Parameter `...args`
+- [x] Rest Parameters `...args`
 - [x] Default Parameters
-- [ ] Shallow Copy with `Object.assign()` and `{ ...obj }`
+- [ ] Shallow Copy with `Object.assign()` / `{ ...obj }`
 - [ ] Deep Copy with `structuredClone()`
 
 ### 🔄 Iteration & Loops
@@ -32,8 +34,9 @@ A checklist of JavaScript ES6+ features grouped by category.
 - [x] `join()`
 - [x] `splice()`
 - [x] `slice()`
-- [x] `sort`
-- [x] `reverse`
+- [x] `sort()`
+- [x] `reverse()`
+- [x] `forEach()`
 
 ### 🔠 String Methods
 - [x] `String.includes()`
@@ -53,16 +56,17 @@ A checklist of JavaScript ES6+ features grouped by category.
 - [x] `Math.log2()`
 - [x] `Math.log10()`
 
-### 🚀 Functions & Asynchronous Code
-- [x] Arrow Functions `() => {}`  
-- [x] Function Rest Parameter `...args`
+### 🚀 Functions & Async Code
+- [x] Arrow Functions `() => {}`
+- [x] Function Rest Parameter
 - [x] Promises
 - [x] `async/await`
+- [x] Callbacks
 - [x] Debouncing & Throttling
-- [x] `setTimeout()` & `setInterval()`
+- [x] `setTimeout()` / `setInterval()`
 - [x] `requestAnimationFrame()`
 
-### 🛠️ Objects & Data Structures
+### 🧩 Objects & Data Structures
 - [x] `Map`
 - [x] `Set`
 - [ ] `WeakMap`
@@ -74,30 +78,48 @@ A checklist of JavaScript ES6+ features grouped by category.
 - [ ] `Object.seal()`
 - [ ] `Symbol`
 
-### ⚙️ Advanced JavaScript
-- [x] Event Bubbling, Capturing, Delegation & Stop Propagation
-- [ ] `Proxy` and `Reflect`
+### ⚙️ Advanced Concepts
+- [x] Closures & Practical Applications
+- [x] Hoisting (variables & functions)
+- [x] `==` vs `===`
+- [x] Scope Chain & Lexical Scoping
+- [x] Higher-order Functions
+- [x] Currying & Partial Application
+- [x] How `this` is Determined
+- [x] Prototypes & Inheritance (Prototypal vs Classical)
+- [x] Event Loop & Concurrency Model
+- [x] JS Design Patterns (e.g., Module, Singleton)
+- [x] Memoization & Caching Techniques
+- [ ] Proxy & Reflect
 - [ ] Generators `function*`
 - [ ] Iterators & `Symbol.iterator`
-- [x] Web Workers
-- [ ] Currying Functions
 
-### 🌐 Modern Web APIs
+### 🌐 Web APIs & Browser Features
+- [x] DOM Manipulation & Event Handling (Vanilla JS)
 - [x] Fetch API
 - [ ] Service Workers
-- [ ] Intl API (for internationalization)
 - [ ] Web Storage (`localStorage`, `sessionStorage`)
+- [ ] Intl API
+
+### 🔒 Security & Best Practices
+- [x] XSS Protection
+- [x] CSRF Protection
+- [x] Error Handling with `try...catch`
 
 ---
 
-## 🔜 Upcoming Features to Explore
+## 🔮 Upcoming to Explore
 - [ ] Dynamic Imports `import()`
 - [ ] Optional Chaining `?.`
 - [ ] Nullish Coalescing `??`
-- [ ] WeakRef & FinalizationRegistry
-- [ ] ECMAScript Modules (ESM) `import/export`
 - [ ] `BigInt`
+- [ ] ECMAScript Modules `import/export`
+- [ ] WeakRef & FinalizationRegistry
 
 ---
 
-This checklist helps track JavaScript ES6+ learning progress. Happy coding! 🚀
+## 📌 Summary
+
+This document helps track your progress and knowledge of JavaScript and ES6+ features. Keep exploring, practicing, and building cool stuff. 💪
+
+Happy Coding! 🚀
